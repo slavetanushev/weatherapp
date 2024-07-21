@@ -5,6 +5,9 @@
 	License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
 /*-- Reset Code --*/
 
 html,
@@ -201,7 +204,7 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   text-align: center;
 }
 
@@ -218,7 +221,7 @@ h1 {
   font-size: 50px;
   font-weight: 400;
   color: #f9f9f9;
-  font-family: "Oxygen", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   letter-spacing: 7px;
   margin-top: 50px;
 }
@@ -234,7 +237,7 @@ h1 {
   width: 60%;
   height: 100%;
   float: left;
-  background: url("./images/city.jpg");
+  /* background: url("./images/city.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
@@ -243,12 +246,13 @@ h1 {
   min-height: 500px;
   position: relative;
   background-position-x: -30px;
+  border-radius: 20px;
 }
 
 .title {
-  float: right;
-  font-family: "Oxygen", sans-serif;
-  padding: 30px 30px 0 0;
+  float: left;
+  font-family: "Titillium Web", sans-serif;
+  padding: 30px 30px 30px 30px;
 }
 
 .title h2 {
@@ -271,7 +275,7 @@ h1 {
   color: #fff;
   width: 90%;
   padding: 0 30px 10px 30px;
-  font-family: "Oxygen", sans-serif;
+  font-family: "Titillium Web", sans-serif;
 }
 
 div#txt {
@@ -295,7 +299,7 @@ div#txt {
 }
 
 .temperature p {
-  font-family: "Raleway", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 80px;
   font-weight: 100;
   margin: 0 40px;
@@ -536,8 +540,8 @@ div#txt {
     padding: 0;
   }
   .dmy {
-    padding: 0;
-    margin-bottom: 35px;
+    padding-bottom: 1%;
+    margin-bottom: 5px;
     text-align: center;
     width: 100%;
   }
@@ -545,9 +549,10 @@ div#txt {
     font-size: 30px;
   }
   .date {
-    font-size: 22px;
+    font-size: 10px;
   }
   .temperature {
+    padding-bottom: 10%;
     text-align: center;
     width: 100%;
   }
@@ -622,7 +627,6 @@ div#txt {
   z-index: 2;
 }
 .search-box .img-box {
-  background: rgb(255, 255, 255, 0.2);
   border-radius: 50%;
   height: 32px;
   width: 35px;
@@ -684,7 +688,7 @@ div#txt {
   font-size: 1rem;
   border-radius: 3px;
   cursor: pointer;
-  font-family: "Roboto", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   position: relative;
   margin-top: 30px;
   margin: 0px;

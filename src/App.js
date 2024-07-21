@@ -9,11 +9,8 @@ function App() {
         <CurrentLocation />
       </div>
       <div className="footer-info">
-        <a href="web">
-          Download Source Code
-        </a>{" "}
-        | Developed by{" "}
-        <a target="_blank" href="tanushev.dev">
+        Developed by{" "}
+        <a target="_blank" href="https://github.com/slavetanushev">
           Slave Tanushev
         </a>{" "}
       </div>

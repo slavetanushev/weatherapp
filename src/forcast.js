@@ -1,4 +1,5 @@
-import React, { useState, useEffect, Component } from "react";
+import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import apiKeys from "./apiKeys";
 import ReactAnimatedWeather from "react-animated-weather";
@@ -12,7 +13,7 @@ function Forcast(props) {
     axios
       .get(
         `${apiKeys.base}weather?q=${
-          city != "[object Object]" ? city : query
+          city !== "[object Object]" ? city : query
         }&units=metric&APPID=${apiKeys.key}`
       )
       .then((response) => {
@@ -35,12 +36,12 @@ function Forcast(props) {
 
   const defaults = {
     color: "white",
-    size: 112,
+    size: 100,
     animate: true,
   };
 
   useEffect(() => {
-    search("Delhi");
+    search("Josifovo");
   }, []);
 
   return (
@@ -60,15 +61,17 @@ function Forcast(props) {
             type="text"
             className="search-bar"
             placeholder="Search any city"
+            FontAwesomeIcon icon="fa-solid fa-magnifying-glass"
             onChange={(e) => setQuery(e.target.value)}
             value={query}
           />
           <div className="img-box">
             {" "}
-            <img
+            {
+            /* <img
               src="https://images.avishkaar.cc/workflow/newhp/search-white.png"
               onClick={search}
-            />
+            /> */}
           </div>
         </div>
         <ul>
