@@ -1,5 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import apiKeys from "./apiKeys";
 import ReactAnimatedWeather from "react-animated-weather";
@@ -61,17 +61,17 @@ function Forcast(props) {
             type="text"
             className="search-bar"
             placeholder="Search any city"
-            FontAwesomeIcon icon="fa-solid fa-magnifying-glass"
             onChange={(e) => setQuery(e.target.value)}
             value={query}
           />
           <div className="img-box">
             {" "}
             {
-            /* <img
-              src="https://images.avishkaar.cc/workflow/newhp/search-white.png"
+            <img
+              src="https://images.avishkaar.cc/workflow/newhp/search-white.png"alt="search"
               onClick={search}
-            /> */}
+            />
+            }
           </div>
         </div>
         <ul>
@@ -84,7 +84,7 @@ function Forcast(props) {
                 </p>
                 <img
                   className="temp"
-                  src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
+                  src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}.png` }
                 />
               </li>
               <li>
