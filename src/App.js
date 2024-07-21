@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import CurrentLocation from "./currentLocation";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <div className="container">
+        <CurrentLocation />
+      </div>
+      <div className="footer-info">
+        <a href="web">
+          Download Source Code
+        </a>{" "}
+        | Developed by{" "}
+        <a target="_blank" href="tanushev.dev">
+          Slave Tanushev
+        </a>{" "}
+      </div>
+    </React.Fragment>
   );
 }
 
