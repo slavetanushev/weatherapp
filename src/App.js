@@ -10,7 +10,7 @@ function App() {
       </div>
       <div className="footer-info">
         Developed by{" "}
-        <a target="_blank" href="https://github.com/slavetanushev">
+        <a target="blank" href="https://github.com/slavetanushev">
           Slave Tanushev
         </a>{" "}
       </div>

@@ -227,10 +227,11 @@ h1 {
 }
 
 .container {
-  width: 65%;
+  width: 55%;
   height: 80vh;
   margin: 50px auto;
-  background-color: rgba(0, 0, 0, 0.73);
+  background-color: rgba(0, 0, 0, 0.63);
+  border-radius: 20px;
 }
 
 .city {

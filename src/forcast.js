@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import apiKeys from "./apiKeys";
 import ReactAnimatedWeather from "react-animated-weather";
@@ -13,7 +12,7 @@ function Forcast(props) {
     axios
       .get(
         `${apiKeys.base}weather?q=${
-          city !== "[object Object]" ? city : query
+          city != "[object Object]" ? city : query
         }&units=metric&APPID=${apiKeys.key}`
       )
       .then((response) => {
@@ -27,16 +26,16 @@ function Forcast(props) {
         setError({ message: "Not Found", query: query });
       });
   };
-  function checkTime(i) {
-    if (i < 10) {
-      i = "0" + i;
-    } // add zero in front of numbers < 10
-    return i;
-  }
+  // function checkTime(i) {
+  //   if (i < 10) {
+  //     i = "0" + i;
+  //   } // add zero in front of numbers < 10
+  //   return i;
+  // }  Proveri zosto ne raboti!!!!!
 
   const defaults = {
     color: "white",
-    size: 100,
+    size: 112,
     animate: true,
   };
 
@@ -60,18 +59,16 @@ function Forcast(props) {
           <input
             type="text"
             className="search-bar"
-            placeholder="Search any city"
-            FontAwesomeIcon icon="fa-solid fa-magnifying-glass"
+            placeholder="Search any place"
             onChange={(e) => setQuery(e.target.value)}
             value={query}
           />
           <div className="img-box">
             {" "}
-            {
-            /* <img
+            <img
               src="https://images.avishkaar.cc/workflow/newhp/search-white.png"
               onClick={search}
-            /> */}
+            />
           </div>
         </div>
         <ul>
