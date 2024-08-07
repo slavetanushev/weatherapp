@@ -79,7 +79,7 @@ function Forcast(props) {
                 </p>
                 <img
                   className="temp"
-                  src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
+                  src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}.png`} alt="weather"
                 />
               </li>
               <li>
