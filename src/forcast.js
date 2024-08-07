@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import apiKeys from "./apiKeys";
 import ReactAnimatedWeather from "react-animated-weather";
+import '/node_modules/font-awesome/css/font-awesome.min.css'; 
 
 function Forcast(props) {
   const [query, setQuery] = useState("");
@@ -31,7 +32,7 @@ function Forcast(props) {
   //     i = "0" + i;
   //   } // add zero in front of numbers < 10
   //   return i;
-  // }  Proveri zosto ne raboti!!!!!
+  // }  Proveri zosto ne si ja upotrebil!!!!!
 
   const defaults = {
     color: "white",
@@ -65,10 +66,7 @@ function Forcast(props) {
           />
           <div className="img-box">
             {" "}
-            <img
-              src="https://images.avishkaar.cc/workflow/newhp/search-white.png"
-              onClick={search}
-            />
+            <div><i className="fa fa-search fa-lg" onClick={search} ></i></div>
           </div>
         </div>
         <ul>

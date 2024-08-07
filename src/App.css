@@ -640,6 +640,10 @@ div#txt {
   width: 60%;
   cursor: pointer;
 }
+
+.fa-search {
+  color: #fff;
+}
 .search-box .search-bar {
   border: none;
   padding: 10px 11px;
