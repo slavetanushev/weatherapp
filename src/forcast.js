@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import apiKeys from "./apiKeys";
@@ -13,7 +12,7 @@ function Forcast(props) {
     axios
       .get(
         `${apiKeys.base}weather?q=${
-          city !== "[object Object]" ? city : query
+          city != "[object Object]" ? city : query
         }&units=metric&APPID=${apiKeys.key}`
       )
       .then((response) => {
@@ -27,16 +26,16 @@ function Forcast(props) {
         setError({ message: "Not Found", query: query });
       });
   };
-  function checkTime(i) {
-    if (i < 10) {
-      i = "0" + i;
-    } // add zero in front of numbers < 10
-    return i;
-  }
+  // function checkTime(i) {
+  //   if (i < 10) {
+  //     i = "0" + i;
+  //   } // add zero in front of numbers < 10
+  //   return i;
+  // }  Proveri zosto ne raboti!!!!!
 
   const defaults = {
     color: "white",
-    size: 100,
+    size: 112,
     animate: true,
   };
 
@@ -60,18 +59,16 @@ function Forcast(props) {
           <input
             type="text"
             className="search-bar"
-            placeholder="Search any city"
+            placeholder="Search any place"
             onChange={(e) => setQuery(e.target.value)}
             value={query}
           />
           <div className="img-box">
             {" "}
-            {
             <img
-              src="https://images.avishkaar.cc/workflow/newhp/search-white.png"alt="search"
+              src="https://images.avishkaar.cc/workflow/newhp/search-white.png"
               onClick={search}
             />
-            }
           </div>
         </div>
         <ul>
@@ -84,7 +81,7 @@ function Forcast(props) {
                 </p>
                 <img
                   className="temp"
-                  src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}.png` }
+                  src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
                 />
               </li>
               <li>
